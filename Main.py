@@ -84,7 +84,7 @@ class myFred2(threading.Thread):
     
     def run(self):
         Pin.rel("on",27)
-        time.sleep(15)
+        time.sleep(25)
         Pin.rel("off",27) 
         
 t1=myFred(1,"t1")
@@ -96,6 +96,7 @@ while (True):
         t2=myFred2(2,"t2")
         t2.start()
         while(len(Wert.Fach)!=0):
+            print(Wert.Fach[0])
             Pin.rel("on",int(Wert.Fach[0]))
             time.sleep(3)
             Pin.rel("off",int(Wert.Fach[0]))   
