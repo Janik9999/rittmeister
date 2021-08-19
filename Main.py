@@ -98,7 +98,7 @@ while (True):
         while(len(Wert.Fach)!=0):
             print(Wert.Fach[0])
             Pin.rel("on",int(Wert.Fach[0]))
-            time.sleep(3)
+            time.sleep(15)
             Pin.rel("off",int(Wert.Fach[0]))   
             Wert.Fach.remove(Wert.Fach[0])
 
