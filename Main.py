@@ -59,6 +59,8 @@ GPIO.setup(23, GPIO.OUT)
 Pin.rel("off",23) 
 GPIO.setup(24, GPIO.OUT)
 Pin.rel("off",24) 
+GPIO.setup(25, GPIO.OUT)
+Pin.rel("off",25)
 
 GPIO.setup(27, GPIO.OUT)
 Pin.rel("off",27) 
@@ -98,7 +100,7 @@ while (True):
         while(len(Wert.Fach)!=0):
             print(Wert.Fach[0])
             Pin.rel("on",int(Wert.Fach[0]))
-            time.sleep(15)
+            time.sleep(10)
             Pin.rel("off",int(Wert.Fach[0]))   
             Wert.Fach.remove(Wert.Fach[0])
 
